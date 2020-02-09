@@ -27,7 +27,7 @@ A step by step how to get your developer key
 
 ### Running the Script
 
-Before running the script you need to add your developer key on line 5 and add the word you want to search on line 59, after that you enter terminal or console windows/Linux/mac.  
+Before running the script you need to add your developer key at line 5, add the key word at line 54 and set the range of videos to be searched at line 11 , after that you enter terminal or console windows/Linux/mac.  
 ```
 python Filename.py
 ```
