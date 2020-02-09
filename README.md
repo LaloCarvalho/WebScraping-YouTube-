@@ -1,4 +1,4 @@
-# Webccrapping using Python
+# Webscrapping using Python
 
 ### Prerequisites
 
@@ -18,7 +18,7 @@ step 2. pip install apiclient
 step 3. pip install matplotlib
 ```
 
-### How to get your a developer key for YouTube
+### How to get a developer key for YouTube
 
 A step by step how to get your developer key
 
@@ -27,7 +27,7 @@ A step by step how to get your developer key
 
 ### Running the Script
 
-Enter terminal or console windows/Linux/mac.  
+Before running the script you need to add your developer key on line 5 and add the word you want to search on line 59, after that you enter terminal or console windows/Linux/mac.  
 ```
 python Filename.py
 ```

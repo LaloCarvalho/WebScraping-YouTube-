@@ -49,7 +49,7 @@ def get_comment_threads(youtube, video_id):
           dados = "Nome:  %s, Texto: %s, DataPublicação: %s" % (author, text, published_at)
           lista.append(dados)
           #print(dados)
-        with open('gravaYoutube.txt', 'w', encoding='utf-8') as save:
+        with open('Youtube.txt', 'w', encoding='utf-8') as save:
              save.writelines('\n'.join(lista))
         print(lista)
      
