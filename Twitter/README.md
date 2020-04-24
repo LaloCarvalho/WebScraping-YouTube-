@@ -4,16 +4,18 @@
 
 Things you need to install and how to install them
 ```
-Python 3 / Anaconda
+* Python 3 / Anaconda
+* MongoDB
+* Tweepy
 ```
-* [Tweepy](https://www.tweepy.org/) - The Web site Tweepy
 
 ### Installing
 
 A step by step how to get it running
 ```
-step 1. python3 or Anaconda
-step 2. pip install tweepy
+step 1. [python3 or Anaconda](https://docs.anaconda.com/anaconda/install/) - Install Anaconda
+step 2. [MongoDB](https://www.mongodb.com/download-center/community/) - Install MongoDB
+step 3. [Tweepy](https://www.tweepy.org/) - Install Tweepy OR "pip install tweepy" on cmd
 ```
 
 ### How to get API Keys and Tokens for Twitter
@@ -24,7 +26,7 @@ In order for you to get the Twitter feed working you need four keys; the Consume
 
 ### Running the Script
 
-Before running the script you need to add your keys at line 12 to 16 and add the key word at line 40, after that you enter terminal or console windows/Linux/mac.  
+Before running the script you need to add your keys at line 8 to 11 and add the key word at line 37, after that you enter terminal or console windows/Linux/mac.  
 ```
 python Filename.py
 ```

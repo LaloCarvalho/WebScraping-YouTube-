@@ -1,41 +1,41 @@
-from __future__ import absolute_import, print_function
 from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
-import datetime 
+from datetime import datetime
+from pymongo import MongoClient
+import json
 
-GetDataHoje = datetime.datetime.now()
-GetDataHoje = str(GetDataHoje)
-GetDataHoje = GetDataHoje[:10]
+consumer_key = ""
+consumer_secret = ""
+access_token = ""
+access_token_secret = ""
 
-#Add below your keys
-consumer_key=""
-consumer_secret=""
+auth = OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token, access_token_secret)
 
-access_token=""
-access_token_secret=""
+class MyListener(StreamListener):
+    def on_data(self, dados):
+        try:
+           tweet = json.loads(dados)
+           created_at = tweet["created_at"]
+           id_str = tweet["id_str"]
+           text = tweet["text"]
+           obj = {"created_at":created_at,"id_str":id_str,"text":text,}
+           tweetind = col.insert_one(obj).inserted_id
+           print (obj)
+        except Exception as e:
+            print(e)
+        return True
+		
+mylistener = MyListener()
+mystream = Stream(auth, listener = mylistener)
 
-lista = []
+client = MongoClient('localhost', 27017)
+db = client.twitterdb
+col = db.tweets2
 
-class StdOutListener(StreamListener):
+keywords = ['']
 
-    def on_status(self, status):
-        data = status.user.screen_name+'|||'+status.text+'|||'+str(status.created_at)
-        print(data)
-        lista.append(data)
-        with open(r'Twitter'+GetDataHoje+'.txt', 'w', encoding="utf-8") as save:
-            save.writelines(lista)
-        return True 
+mystream.filter(track=keywords)
 
-    def on_error(self, status):
-        print(status)
-
-if __name__ == '__main__':
-    l = StdOutListener()
-    auth = OAuthHandler(consumer_key, consumer_secret)
-    auth.set_access_token(access_token, access_token_secret)
-
-    stream = Stream(auth, l)´
-	#track= Key word
-    s = stream.filter(track=[''], languages=['pt'])  
-    
+mystream.disconnect()
