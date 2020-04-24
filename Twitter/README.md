@@ -12,11 +12,11 @@ Things you need to install and how to install them
 ### Installing
 
 A step by step how to get it running
-```
+
 step 1. [python3 or Anaconda](https://docs.anaconda.com/anaconda/install/) - Install Anaconda
 step 2. [MongoDB](https://www.mongodb.com/download-center/community/) - Install MongoDB
 step 3. [Tweepy](https://www.tweepy.org/) - Install Tweepy OR "pip install tweepy" on cmd
-```
+
 
 ### How to get API Keys and Tokens for Twitter
 
