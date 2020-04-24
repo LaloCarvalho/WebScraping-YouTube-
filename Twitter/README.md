@@ -13,9 +13,9 @@ Things you need to install and how to install them
 
 A step by step how to get it running
 
-step 1. Install Python3 / Anaconda - [Anaconda](https://docs.anaconda.com/anaconda/install/)
-step 2. Install MongoDB - [MongoDB](https://www.mongodb.com/download-center/community/)
-step 3. Install Tweepy - [Tweepy](https://www.tweepy.org/) OR "pip install tweepy" on cmd
+<p>step 1. Install Python3 / Anaconda - [Anaconda](https://docs.anaconda.com/anaconda/install/)</p>
+<p>step 2. Install MongoDB - [MongoDB](https://www.mongodb.com/download-center/community/)</p>
+<p>step 3. Install Tweepy - [Tweepy](https://www.tweepy.org/) OR "pip install tweepy" on cmd</p>
 
 
 ### How to get API Keys and Tokens for Twitter
